@@ -72,7 +72,7 @@ button.small:hover{border-color:var(--accent);background:var(--panel2)}
 #blogo img{width:54px;height:54px;object-fit:contain;display:block}
 .t{white-space:nowrap;overflow:visible;line-height:41px}
 #title{left:293px;top:57px;font-size:34px;color:#fff;max-width:548px}
-#sub{left:293px;top:101px;font-size:34px;color:#bbb}
+#sub{left:293px;top:104px;font-size:28px;font-weight:600;line-height:34px;color:#aaa}
 #exp{left:353px;top:201px;font-size:26px;line-height:31px;color:#ccc}
 #clock{left:293px;top:192px;width:50px;height:50px;object-fit:contain}
 #chev{left:853px;top:148px}
@@ -151,7 +151,7 @@ function outline(r){
   for(var i=0;i<n;i++){var a=i*2*Math.PI/n;s.push((Math.cos(a)*r).toFixed(2)+'px '+(Math.sin(a)*r).toFixed(2)+'px 0 #000')}
   return s.join(',');
 }
-$('title').style.textShadow=outline(3);$('sub').style.textShadow=outline(3);$('exp').style.textShadow=outline(2);
+$('title').style.textShadow=outline(3);$('sub').style.textShadow=outline(2.5);$('exp').style.textShadow=outline(2);
 function sync(){
   var p=parseInt($('pcs').value,10);if(isNaN(p))p=0;
   $('title').textContent=p+'x '+($('name').value||'');
