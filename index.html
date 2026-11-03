@@ -133,7 +133,7 @@ var GAMES={
 var game='coc',logos={coc:DEF.coc,cr:DEF.cr,hd:DEF.hd,bs:DEF.bs};
 function renderBadge(){
   $('badge').style.background=GAMES[game].bg;
-  var b=$('blogo');b.innerHTML='';if(logos[game]){var im=new Image();im.onload=function(){var k=Math.min(54/im.naturalWidth,54/im.naturalHeight);im.style.width=(im.naturalWidth*k)+'px';im.style.height=(im.naturalHeight*k)+'px'};im.src=logos[game];b.appendChild(im)}else{b.innerHTML='<span style="font:700 28px Inter,sans-serif;color:#8b95a7">+</span>'}
+  var b=$('blogo');b.innerHTML='';if(logos[game]){var im=new Image();im.onload=function(){var k=Math.min(54/im.naturalWidth,54/im.naturalHeight);im.style.width=(im.naturalWidth*k)+'px';im.style.height=(im.naturalHeight*k)+'px'};im.src=logos[game];b.appendChild(im)}else{b.innerHTML='<span style="position:relative;display:block;width:24px;height:24px"><i style="position:absolute;left:0;top:10.5px;width:24px;height:3px;border-radius:2px;background:#8b95a7"></i><i style="position:absolute;left:10.5px;top:0;width:3px;height:24px;border-radius:2px;background:#8b95a7"></i></span>'}
   var cs=document.querySelectorAll('.chip');
   for(var i=0;i<cs.length;i++)cs[i].className='chip'+(cs[i].dataset.k===game?' on':'');
 }
